@@ -8,7 +8,7 @@ class SplashScreen extends Component {
     // such as fetching data or initializing services
     setTimeout(() => {
 
-      this.props.navigation.navigate("Home"); // replace 'Main' with the name of your main app component
+      this.props.navigation.navigate("Login"); // replace 'Main' with the name of your main app component
 
     }, 3000); // replace 3000 with the desired number of milliseconds for your splash screen to display
   }

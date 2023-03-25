@@ -11,6 +11,7 @@ import AdddNotice from './Notices/AddNotice';
 import Addfeedback from './Feedback/Addfeedback';
 import AddClassSchedule from './TimeTable/ClassSchedule';
 import { useNavigation } from "@react-navigation/native";
+import ScheduleListStd from './TimeTable/ScheduleListStd';
 
 function Home() {
   return (
@@ -245,7 +246,7 @@ export default function App() {
         <Tab.Screen name="Home" component={Home} />
         <Tab.Screen name="Student" component={AdddNotice} />
         <Tab.Screen name="Feedback" component={Addfeedback} />
-        <Tab.Screen name="Timetable" component={AddClassSchedule} />
+        <Tab.Screen name="Timetable" component={ScheduleListStd} />
         <Tab.Screen name="Uploading" component={Uploading} />
       </Tab.Navigator>
     // </NavigationContainer>
