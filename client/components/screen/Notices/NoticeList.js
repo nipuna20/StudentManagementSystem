@@ -43,11 +43,14 @@ export default function NoticeList() {
     <View>
       <Text
         style={{
-          color: "#0D0140",
+          color: "#066b24",
           fontWeight: "bold",
           fontSize: 30,
-          marginTop: 20,
+          marginTop: 30,
           textAlign: "center",
+          textShadowColor: "#585858",
+          textShadowOffset: { width: 5, height: 5 },
+          textShadowRadius: 10,
         }}
       >
         Notice List
@@ -63,7 +66,7 @@ export default function NoticeList() {
           <View
             style={{
               margin: 5,
-              backgroundColor: "#fff",
+              backgroundColor: "#c8e3d0",
               padding: 10,
               borderRadius: 15,
               elevation: 10,

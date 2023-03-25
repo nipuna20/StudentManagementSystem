@@ -10,7 +10,7 @@ const firebaseConfig = {
   storageBucket: "studentmanagemet.appspot.com",
   messagingSenderId: "678737456673",
   appId: "1:678737456673:web:c61dedc299f1f15b063d60",
-  measurementId:"G-BB6X4VVPCL",
+  measurementId: "G-BB6X4VVPCL",
 };
 
 // Initialize Firebase
