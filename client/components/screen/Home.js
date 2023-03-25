@@ -16,9 +16,7 @@ import ScheduleListStd from './TimeTable/ScheduleListStd';
 function Home() {
   return (
    
-  
 
-// ...
 
 <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#e5e8e8' }}>
   <Card style={{ width: 270, height: 270, marginBottom: 10, marginTop: 10, backgroundColor: '#d5d8dc' }}>
