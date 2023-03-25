@@ -13,17 +13,18 @@ class SplashScreen extends Component {
 
   render() {
     return (
-      <ImageBackground
-        source={require("../../assets/SLIIT.png")}
-        style={styles.background}
-      >
-        <Image
-          source={{
-            uri: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/35771931234507.564a1d2403b3a.gif",
-          }}
-          style={styles.gif}
-        />
-      </ImageBackground>
+      // <ImageBackground
+      //   source={require("../../assets/SLIIT.png")}
+      //   style={styles.background}
+      // >
+      //   <Image
+      //     source={{
+      //       uri: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/35771931234507.564a1d2403b3a.gif",
+      //     }}
+      //     style={styles.gif}
+      //   />
+      // </ImageBackground>
+      <Text>Splash Screen</Text>
     );
   }
 }
