@@ -18,7 +18,7 @@ import {
   doc,
 } from "firebase/firestore";
 
-export default function UpdateFeedback({ route }) {
+export default function Updatefeedback({ route }) {
   const { item } = route.params;
   const id = item.id;
   const [data, setData] = useState("");
@@ -85,7 +85,7 @@ export default function UpdateFeedback({ route }) {
           padding: 10,
         }}
       >
-        <Text style={styles.text}>Details</Text>
+        <Text style={styles.text}>Topic</Text>
         <TextInput
           style={{
             borderColor: "#67afff",
@@ -94,8 +94,22 @@ export default function UpdateFeedback({ route }) {
             padding: 5,
             paddingLeft: 10,
           }}
-          keyboardType="Details"
-          placeholder="Details"
+          keyboardType="topic"
+          placeholder="topic"
+          value={data.topic}
+          onChangeText={(val) => handleChangeText("topic", val)}
+        ></TextInput>
+        <Text style={styles.text}>Feedback</Text>
+        <TextInput
+          style={{
+            borderColor: "#67afff",
+            borderWidth: 1.5,
+            borderRadius: 10,
+            padding: 5,
+            paddingLeft: 10,
+          }}
+          keyboardType="feedback"
+          placeholder="feedback"
           value={data.detail}
           onChangeText={(val) => handleChangeText("detail", val)}
         ></TextInput>

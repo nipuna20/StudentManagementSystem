@@ -69,7 +69,8 @@ export default function FeedbackList() {
               elevation: 10,
             }}
           >
-            <Text style={styles.text}>Details : {item.detail}</Text>
+            <Text style={styles.text}>Topic : {item.topic}</Text>
+            <Text style={styles.text}>Feedback : {item.detail}</Text>
             <Text style={styles.text}>Name : {item.name}</Text>
             <Text style={styles.text}>User ID : {item.id}</Text>
             <View
