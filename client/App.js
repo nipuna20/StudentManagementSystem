@@ -10,15 +10,16 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import AddFeedback from "./components/screen/Feedback/Addfeedback";
 import FeedbackList from "./components/screen/Feedback/FeedbackList";
 import UpdateFeedback from "./components/screen/Feedback/UpdateFeedback";
-import Home from "./components/screen/Home"
-
+import Home from "./components/screen/Home";
 
 //Chanduni
 import AddNotice from "./components/screen/Notices/AddNotice";
 import NoticeList from "./components/screen/Notices/NoticeList";
-import UpdateNotice from './components/screen/Notices/UpdateNotice'
+import UpdateNotice from "./components/screen/Notices/UpdateNotice";
+import AdminDashboard from "./components/Common/AdminDashboard";
+import NoticeHome from "./components/screen/Notices/NoticeHome";
 
-import AddClassSchedule from './components/screen/TimeTable/ClassSchedule'
+import AddClassSchedule from "./components/screen/TimeTable/ClassSchedule";
 import ScheduleList from "./components/screen/TimeTable/ScheduleList";
 import UpdateSchedule from "./components/screen/TimeTable/UpdateSchedule";
 import Login from "./components/screen/Login";
@@ -38,14 +39,13 @@ export default function App() {
           <Stack.Screen name="Add User" component={AddUser} />
           <Stack.Screen name="User List" component={UserList} />
           <Stack.Screen name="Update User" component={UpdateUser} />
-     
-        
-
 
           {/* Chanduni */}
           <Stack.Screen name="Add Notice" component={AddNotice} />
           <Stack.Screen name="View Notice" component={NoticeList} />
           <Stack.Screen name="Update Notice" component={UpdateNotice} />
+          <Stack.Screen name="AdminDashboard" component={AdminDashboard} />
+          <Stack.Screen name="Notice Home" component={NoticeHome} />
 
           {/* Vishwa */}
           <Stack.Screen name="Add ClassSchedule" component={AddClassSchedule} />
@@ -54,15 +54,11 @@ export default function App() {
 
           <Stack.Screen name="Login" component={Login} />
 
-
-           {/* Nipuna */}
-           <Stack.Screen name="Add Feedback" component={AddFeedback} />
+          {/* Nipuna */}
+          <Stack.Screen name="Add Feedback" component={AddFeedback} />
           <Stack.Screen name="Feedback List" component={FeedbackList} />
           <Stack.Screen name="Update Feedback" component={UpdateFeedback} />
           <Stack.Screen name="Home" component={Home} />
-
-
-
         </Stack.Navigator>
       </NavigationContainer>
     </View>
