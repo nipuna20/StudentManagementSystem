@@ -34,7 +34,8 @@ export default function App() {
       }}
     >
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Splash">
+        <Stack.Navigator>
+        {/* <Stack.Navigator initialRouteName="Splash"> */}
           <Stack.Screen name="Splash" component={SplashScreen} />
           <Stack.Screen name="Add User" component={AddUser} />
           <Stack.Screen name="User List" component={UserList} />
