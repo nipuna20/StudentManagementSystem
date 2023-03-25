@@ -7,23 +7,26 @@ class SplashScreen extends Component {
     // You can add any logic here to run when the splash screen loads
     // such as fetching data or initializing services
     setTimeout(() => {
+
       this.props.navigation.navigate("Home"); // replace 'Main' with the name of your main app component
+
     }, 3000); // replace 3000 with the desired number of milliseconds for your splash screen to display
   }
 
   render() {
     return (
-      <ImageBackground
-        source={require("../../assets/SLIIT.png")}
-        style={styles.background}
-      >
-        <Image
-          source={{
-            uri: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/35771931234507.564a1d2403b3a.gif",
-          }}
-          style={styles.gif}
-        />
-      </ImageBackground>
+      // <ImageBackground
+      //   source={require("../../assets/SLIIT.png")}
+      //   style={styles.background}
+      // >
+      //   <Image
+      //     source={{
+      //       uri: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/35771931234507.564a1d2403b3a.gif",
+      //     }}
+      //     style={styles.gif}
+      //   />
+      // </ImageBackground>
+      <Text>Splash Screen</Text>
     );
   }
 }

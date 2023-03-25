@@ -23,6 +23,7 @@ import AddClassSchedule from "./components/screen/TimeTable/ClassSchedule";
 import ScheduleList from "./components/screen/TimeTable/ScheduleList";
 import UpdateSchedule from "./components/screen/TimeTable/UpdateSchedule";
 import Login from "./components/screen/Login";
+import Register from "./components/screen/Register";
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -33,9 +34,11 @@ export default function App() {
         flex: 1,
       }}
     >
-      <NavigationContainer >
-        <Stack.Navigator initialRouteName="Home">
-          <Stack.Screen name="Home" component={Home} />
+
+      <NavigationContainer>
+        <Stack.Navigator>
+        {/* <Stack.Navigator initialRouteName="Splash"> */}
+          <Stack.Screen name="Splash" component={SplashScreen} />
           <Stack.Screen name="Add User" component={AddUser} />
           <Stack.Screen name="User List" component={UserList} />
           <Stack.Screen name="Update User" component={UpdateUser} />
@@ -51,8 +54,8 @@ export default function App() {
           <Stack.Screen name="Add ClassSchedule" component={AddClassSchedule} />
           <Stack.Screen name="Schedule List" component={ScheduleList} />
           <Stack.Screen name="Update Schedule" component={UpdateSchedule} />
-
           <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Register" component={Register} />
 
           {/* Nipuna */}
           <Stack.Screen name="Add Feedback" component={AddFeedback} />
