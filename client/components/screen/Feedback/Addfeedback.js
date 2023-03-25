@@ -7,6 +7,7 @@ import {
   ToastAndroid,
 } from "react-native";
 import React, { useState } from "react";
+
 import { db } from "../../firebase-config/firebase-config";
 import { useNavigation } from "@react-navigation/native";
 import { collection, addDoc } from "firebase/firestore";
@@ -22,6 +23,8 @@ export default function Addfeedback() {
   const handleChangeText = (name, value) => {
     setData((prevState) => ({ ...prevState, [name]: value }));
   };
+
+  
 
   //create user function,include firebase methods
   const add_data = async () => {
@@ -43,10 +46,11 @@ export default function Addfeedback() {
     }
   };
 
+
   return (
       
     <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#e5e8e8' }}>
-    <Card style={{  marginBottom: 10, marginTop: 10, backgroundColor: '#d5d8dc', width: 350 }}>
+    <Card style={{  marginBottom: 10, marginTop: 10, backgroundColor: '#d5d8dc',  }}>
       <Card.Content>
     <View style={{ flex: 1, top: 10 }}>
       <Text
@@ -142,10 +146,30 @@ export default function Addfeedback() {
           underlayColor="#0084fffa"
         >
           <Text style={{ fontSize: 20, fontWeight: "bold", color: "#fff" }}>
-            List 🛒
+            List 
           </Text>
         </TouchableOpacity>
       </View>
+      <View style={{ marginHorizontal: 15 }}>
+        {/* Button */}
+        <TouchableOpacity
+          style={{
+            marginTop: 10,
+            backgroundColor: "#0D47A1",
+            height: 40,
+            justifyContent: "center",
+            alignItems: "center",
+            borderRadius: 7,
+          }}
+          onPress={() => navigation.navigate("Admin Feedback")}
+          underlayColor="#0084fffa"
+        >
+          <Text style={{ fontSize: 20, fontWeight: "bold", color: "#fff" }}>
+            Admin List 
+          </Text>
+        </TouchableOpacity>
+      </View>
+      
     </View>
     </Card.Content>
     </Card>
