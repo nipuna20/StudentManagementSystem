@@ -24,12 +24,12 @@ function Home() {
   );
 }
 
-function Student() {
+function Notices() {
   return (
     <Card>
       <Card.Content>
         <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-          <Text>Student!</Text>
+          <Text>Notice!</Text>
         </View>
       </Card.Content>
     </Card>
@@ -101,7 +101,7 @@ export default function App() {
               ? 'cloud-upload-outline' 
               : 'cloud-upload-outline';
             }
-            else if (route.name === 'Student') {
+            else if (route.name === 'Notices') {
               iconName = focused 
               ? 'book-outline' 
               : 'book-outline';
@@ -115,7 +115,7 @@ export default function App() {
         })}
       >
         <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="Student" component={Student} />
+        <Tab.Screen name="Notices" component={Notices} />
         <Tab.Screen name="Feedback" component={Feedback} />
         <Tab.Screen name="Timetable" component={Timetable} />
         <Tab.Screen name="Uploading" component={Uploading} />
