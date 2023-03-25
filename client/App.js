@@ -23,6 +23,7 @@ import AddClassSchedule from "./components/screen/TimeTable/ClassSchedule";
 import ScheduleList from "./components/screen/TimeTable/ScheduleList";
 import UpdateSchedule from "./components/screen/TimeTable/UpdateSchedule";
 import Login from "./components/screen/Login";
+import Register from "./components/screen/Register";
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -51,8 +52,8 @@ export default function App() {
           <Stack.Screen name="Add ClassSchedule" component={AddClassSchedule} />
           <Stack.Screen name="Schedule List" component={ScheduleList} />
           <Stack.Screen name="Update Schedule" component={UpdateSchedule} />
-
           <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Register" component={Register} />
 
           {/* Nipuna */}
           <Stack.Screen name="Add Feedback" component={AddFeedback} />
