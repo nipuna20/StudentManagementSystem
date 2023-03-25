@@ -49,17 +49,8 @@ export default function AdddNotice({navigation}) {
   };
 
   return (
-    <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#e5e8e8' }}>
-    <Card style={{  marginBottom: 10, marginTop: 10, backgroundColor: '#d5d8dc', width: 350 }}>
-      <Card.Content>
-    <View style={{ flex: 1, top: 10 }}>
-      <Text
-        style={{
-          color: "#0D0140",
-          fontWeight: "bold",
-          fontSize: 30,
-          marginTop: 15,
-          textAlign: "center",
+    
+   
     <View style={{ flex: 1, top: 20, backgroundColor: "#c8e3d0" }}>
       <Image
         style={{
@@ -144,7 +135,6 @@ export default function AdddNotice({navigation}) {
                 placeholder="Enter Publisher"
                 onChangeText={(val) => handleChangeText("date", val)}
               ></TextInput>
-              <br />
 
               {/* submit button */}
               <TouchableOpacity
@@ -181,15 +171,12 @@ export default function AdddNotice({navigation}) {
                 </Text>
               </TouchableOpacity>
             </View>
-            <br />
           </Card.Content>
         </Card>
 
       </View>
     </View>
-    </Card.Content>
-    </Card>
-   </ScrollView>
+
   );
 }
 

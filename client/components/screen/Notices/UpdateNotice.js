@@ -155,7 +155,6 @@ export default function UpdateNotice({ route }) {
                   </Text>
                 </TouchableOpacity>
               </View>
-              <br />
             </Card.Content>
           </Card>
         </View>

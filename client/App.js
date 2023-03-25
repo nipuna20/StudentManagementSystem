@@ -24,6 +24,8 @@ import ScheduleList from "./components/screen/TimeTable/ScheduleList";
 import UpdateSchedule from "./components/screen/TimeTable/UpdateSchedule";
 import Login from "./components/screen/Login";
 import Register from "./components/screen/Register";
+import ScheduleListStd from "./components/screen/TimeTable/ScheduleListStd";
+import AdminFeedbackList from "./components/screen/Feedback/Adminfeedbacklist";
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -53,6 +55,7 @@ export default function App() {
           {/* Vishwa */}
           <Stack.Screen name="Add ClassSchedule" component={AddClassSchedule} />
           <Stack.Screen name="Schedule List" component={ScheduleList} />
+          <Stack.Screen name="ScheduleStd List" component={ScheduleListStd} />
           <Stack.Screen name="Update Schedule" component={UpdateSchedule} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Register" component={Register} />
@@ -61,9 +64,12 @@ export default function App() {
           <Stack.Screen name="Add Feedback" component={AddFeedback} />
           <Stack.Screen name="Feedback List" component={FeedbackList} />
           <Stack.Screen name="Update Feedback" component={UpdateFeedback} />
+
+          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Feedback" component={AdminFeedbackList} />
+
           <Stack.Screen name="Admin Feedback" component={AdminFeedbackList} />
-          
-          
+
         </Stack.Navigator>
       </NavigationContainer>
     </View>

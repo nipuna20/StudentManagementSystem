@@ -1,13 +1,12 @@
 import React from "react";
-import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
+import { Text, View, StyleSheet, TouchableOpacity,ScrollView } from "react-native";
 import { Card, Button, Title, Paragraph } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
-import { ScrollView } from "react-native-web";
+// import { ScrollView } from "react-native-web";
 
 const AdminDashboard = () => {
   const navigation = useNavigation();
   return (
-    <>
       <ScrollView>
         <View style={{ flex: 1, top: 20, backgroundColor: "#c8e3d0" }}>
           <Card style={Styles.container}>
@@ -45,7 +44,7 @@ const AdminDashboard = () => {
           </Card>
           <Card style={Styles.container}>
             <Card.Content>
-              <Title>Contact Management</Title>
+              <Title>Feedback Management</Title>
             </Card.Content>
             <Card.Cover
               source={{
@@ -65,7 +64,7 @@ const AdminDashboard = () => {
                   alignItems: "center",
                   borderRadius: 7,
                 }}
-                onPress={() => navigation.navigate("User List")}
+                onPress={() => navigation.navigate("Feedback")}
                 underlayColor="#0084fffa"
               >
                 <Text
@@ -132,20 +131,19 @@ const AdminDashboard = () => {
                   alignItems: "center",
                   borderRadius: 7,
                 }}
-                onPress={() => navigation.navigate("View Notice")}
+                onPress={() => navigation.navigate("Add ClassSchedule")}
                 underlayColor="#0084fffa"
               >
                 <Text
                   style={{ fontSize: 20, fontWeight: "bold", color: "#fff" }}
                 >
-                  Add a Notice
+                  Add Schedule
                 </Text>
               </TouchableOpacity>
             </Card.Actions>
           </Card>
         </View>
       </ScrollView>
-    </>
   );
 };
 export default AdminDashboard;
