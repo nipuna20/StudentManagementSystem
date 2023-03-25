@@ -142,7 +142,6 @@ export default function Register() {
                   placeholder="Enter the Password"
                   onChangeText={(text) => setPassword(text)}
                 />
-                <br />
                 <TouchableOpacity onPress={handleSubmit} style={styles.button}>
               <Text style={styles.buttonText}>Register</Text>
             </TouchableOpacity>
@@ -157,8 +156,7 @@ export default function Register() {
               <Toast />
             </Card.Content>
           </Card>
-          <br />
-          <br />
+          
         </View>
       </ScrollView>
     </View>
