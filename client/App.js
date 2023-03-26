@@ -18,6 +18,7 @@ import NoticeList from "./components/screen/Notices/NoticeList";
 import UpdateNotice from "./components/screen/Notices/UpdateNotice";
 import AdminDashboard from "./components/Common/AdminDashboard";
 import NoticeHome from "./components/screen/Notices/NoticeHome";
+import SplashScreen from "./components/screen/SplashScreen";
 
 import AddClassSchedule from "./components/screen/TimeTable/ClassSchedule";
 import ScheduleList from "./components/screen/TimeTable/ScheduleList";
@@ -25,7 +26,6 @@ import UpdateSchedule from "./components/screen/TimeTable/UpdateSchedule";
 import Login from "./components/screen/Login";
 import Register from "./components/screen/Register";
 import ScheduleListStd from "./components/screen/TimeTable/ScheduleListStd";
-import AdminFeedbackList from "./components/screen/Feedback/Adminfeedbacklist";
 
 
 const Stack = createNativeStackNavigator();
@@ -39,7 +39,7 @@ export default function App() {
     >
 
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator >
         {/* <Stack.Navigator initialRouteName="Splash"> */}
           <Stack.Screen name="Splash" component={SplashScreen} />
           <Stack.Screen name="Add User" component={AddUser} />
@@ -54,7 +54,7 @@ export default function App() {
           <Stack.Screen name="Notice Home" component={NoticeHome} />
 
           {/* Vishwa */}
-          <Stack.Screen name="Add ClassSchedule" component={AddClassSchedule} />
+          <Stack.Screen screenOptions={{headershown : false}} name="Add ClassSchedule" component={AddClassSchedule} />
           <Stack.Screen name="Schedule List" component={ScheduleList} />
           <Stack.Screen name="ScheduleStd List" component={ScheduleListStd} />
           <Stack.Screen name="Update Schedule" component={UpdateSchedule} />
@@ -66,7 +66,7 @@ export default function App() {
           <Stack.Screen name="Feedback List" component={FeedbackList} />
           <Stack.Screen name="Update Feedback" component={UpdateFeedback} />
 
-          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Home" component={Home} options={{ headerShown: false}} />
           <Stack.Screen name="Feedback" component={AdminFeedbackList} />
           <Stack.Screen name="Admin Feedback" component={AdminFeedbackList} />
         </Stack.Navigator>
