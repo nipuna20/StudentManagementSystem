@@ -58,7 +58,7 @@ export default function App() {
           <Stack.Screen name="Schedule List" component={ScheduleList} />
           <Stack.Screen name="ScheduleStd List" component={ScheduleListStd} />
           <Stack.Screen name="Update Schedule" component={UpdateSchedule} />
-          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Login" component={Login} options={{ headerShown: false}} />
           <Stack.Screen name="Register" component={Register} />
 
           {/* Nipuna */}
