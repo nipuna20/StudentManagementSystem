@@ -4,13 +4,13 @@ import "firebase/compat/auth";
 import "firebase/compat/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyClwul1vE1H-aRF4XO1xjUAj0deK2DKEKE",
-  authDomain: "studentapp-2ba13.firebaseapp.com",
-  projectId: "studentapp-2ba13",
-  storageBucket: "studentapp-2ba13.appspot.com",
-  messagingSenderId: "66413962867",
-  appId: "1:66413962867:web:1b8c2553bfeca57cb9ec06",
-  measurementId: "G-GSD7W7V7LK"
+apiKey: "AIzaSyDRrkdDjdQ7vRSatiLS4CHTDbl46oshuRk",
+  authDomain: "students-d3da5.firebaseapp.com",
+  projectId: "students-d3da5",
+  storageBucket: "students-d3da5.appspot.com",
+  messagingSenderId: "748210407697",
+  appId: "1:748210407697:web:7a3e11c87e72c7dd6ea4b0",
+  measurementId: "G-EWHMZ8ZJ0M",
 };
 
 // Initialize Firebase

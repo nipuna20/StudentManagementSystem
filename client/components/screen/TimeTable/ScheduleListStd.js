@@ -7,12 +7,15 @@ import {
   FlatList,
   TextInput,
   Image,
+  ScrollView,
+  Dimensions,
 } from "react-native";
 import Toast from "react-native-toast-message";
 import { useNavigation } from "@react-navigation/native";
 import { db } from "../../firebase-config/firebase-config";
 import { collection, getDocs, doc, deleteDoc } from "firebase/firestore";
 import { Card } from "react-native-paper";
+const { width, height } = Dimensions.get("window");
 
 export default function ScheduleListStd() {
   const [getData, setGetData] = useState("");
@@ -32,7 +35,21 @@ export default function ScheduleListStd() {
     getAllData();
   }, [ignored]);
 
-  
+  //delete Schedules from database
+  const deleteSchedule = async (id) => {
+    try {
+      const ScheduleDoc = doc(db, "Class Schedule", id);
+      await deleteDoc(ScheduleDoc);
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+    Toast.show({
+      type: "success",
+      text1: "Success",
+      text2: "Class Schedule Successfully Deleted!",
+    });
+    forceUpdate();
+  };
 
   const handleSearch = () => {
     const filtered = originalData.filter(
@@ -51,14 +68,15 @@ export default function ScheduleListStd() {
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView>
+    <View style={{ flex: 1,  backgroundColor: "#c8e3d0",paddingBottom:400 }}>
       <Image
         style={{
-          width: "20%",
-          height: "10%",
+          width: "30%",
+          height: "20%",
           alignItems: "center",
-          marginTop: 20,
-          marginLeft: 280,
+          marginTop: 10,
+          marginLeft: 260,
           marginBottom: -40,
           zIndex: 1,
           borderRadius: 50, // set the borderRadius property to 50 (half of the image width)
@@ -68,17 +86,11 @@ export default function ScheduleListStd() {
           uri: "https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fs3.amazonaws.com%2Fappforest_uf%2Ff1626336719708x872173843502919200%2FDate_time_convertor.gif?w=&h=&auto=compress&dpr=1&fit=max",
         }}
       />
-      <View style={styles.container2}>
-        <Card style={styles.card}>
-          <Card.Content>
+      
+      <Card style={styles.container}>
+            <Card.Content>
             <Text
-              style={{
-                color: "Darkblue",
-                fontWeight: "bold",
-                fontSize: 30,
-                marginTop: 20,
-                textAlign: "center",
-              }}
+              style={styles.title}
             >
               Class Schedule List
             </Text>
@@ -88,7 +100,7 @@ export default function ScheduleListStd() {
                 onChangeText={(text) => setSearchTerm(text)}
                 value={searchTerm}
                 placeholder="Search by day or module"
-                placeholderTextColor="#666"
+                placeholderTextColor="black"
               />
               <TouchableOpacity
                 style={styles.searchButton}
@@ -99,6 +111,7 @@ export default function ScheduleListStd() {
               </TouchableOpacity>
             </View>
 
+            
             {/* store feched data in list using react native flatlist */}
             <FlatList
               style={{
@@ -110,7 +123,7 @@ export default function ScheduleListStd() {
                 <View
                   style={{
                     margin: 5,
-                    backgroundColor: "#c8e3d0",
+                    backgroundColor: "white",
                     padding: 10,
                     borderRadius: 15,
                     elevation: 10,
@@ -121,15 +134,22 @@ export default function ScheduleListStd() {
                   <Text style={styles.text}>Venue : {item.Venue}</Text>
                   <Text style={styles.text}>Module : {item.Module}</Text>
                   <Text style={styles.text}>Lecturer : {item.Lecturer}</Text>
-
+                  <View
+                    style={{
+                      flex: 1,
+                      flexDirection: "row",
+                      justifyContent: "flex-end",
+                    }}
+                  >
+                    
+                  </View>
                 </View>
               )}
-            ></FlatList>
+            ></FlatList></Card.Content>
+           </Card>
             <Toast />
-          </Card.Content>
-        </Card>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
@@ -155,6 +175,7 @@ const styles = StyleSheet.create({
     borderRadius: 7,
     paddingHorizontal: 10,
     marginRight: 10,
+    backgroundColor:'white',
   },
   searchButton: {
     backgroundColor: "#0056A2",
@@ -169,21 +190,17 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   container: {
-    flex: 1,
-    backgroundColor: "#c8e3d0",
-  },
-  container2: {
-    justifyContent: "center",
     alignContent: "center",
     margin: 37,
-    marginLeft: 20,
-    marginRight: 20,
-    marginTop: 0,
-    elevation: 20,
   },
-  background: {
-    flex: 1,
-    resizeMode: "cover", // stretch the image to cover the entire screen
-    backgroundColor: "#c8e3d0",
+
+  title: {
+    fontSize: width * 0.06,
+    fontWeight: "bold",
+    textAlign: "center",
+    marginTop: height * 0.04,
+    marginBottom: height * 0.02,
   },
+
+  
 });

@@ -118,6 +118,8 @@ export default function UpdateSchedule({ route }) {
     // If the selected day and time slot are the same as the original class schedule, no need to check for conflicting schedules
     if (data.selectedDay === originalData.selectedDay && data.selectedTime === originalData.selectedTime) {
       await updateDoc(doc(db, "Class Schedule", id), {
+        selectedDay: data.selectedDay,
+        selectedTime: data.selectedTime,
         Venue: data.Venue,
         Module: data.Module,
         Lecturer: data.Lecturer,

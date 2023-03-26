@@ -70,96 +70,91 @@ export default function UpdateNotice({ route }) {
   };
 
   return (
-    <ImageBackground
-      source={require("../../../assets/bg2.png")}
-      style={styles.background}
-    >
-      <View style={{ flex: 1, top: 20 }}>
-        <View style={styles.container}>
-          <Card style={styles.card}>
-            <Card.Content>
-              <Text
+    <View style={{ flex: 1, top: 20 }}>
+      <View style={styles.container}>
+        <Card style={styles.card}>
+          <Card.Content>
+            <Text
+              style={{
+                color: "#066b24",
+                fontWeight: "bold",
+                fontSize: 30,
+                marginTop: 30,
+                textAlign: "center",
+                textShadowColor: "#585858",
+                textShadowOffset: { width: 5, height: 5 },
+                textShadowRadius: 10,
+              }}
+            >
+              Update Notices
+            </Text>
+            <View
+              style={{
+                margin: 5,
+                borderBottomWidth: 1,
+                borderColor: "#BDBDBD",
+                padding: 10,
+              }}
+            >
+              <Text style={styles.text}>Heading</Text>
+              <TextInput
                 style={{
-                  color: "#066b24",
-                  fontWeight: "bold",
-                  fontSize: 30,
-                  marginTop: 30,
-                  textAlign: "center",
-                  textShadowColor: "#585858",
-                  textShadowOffset: { width: 5, height: 5 },
-                  textShadowRadius: 10,
+                  borderColor: "#066b24",
+                  borderWidth: 1.5,
+                  borderRadius: 10,
+                  padding: 5,
+                  paddingLeft: 10,
                 }}
-              >
-                Update Notices
-              </Text>
-              <View
+                placeholder="enter heading"
+                value={data.heading}
+                onChangeText={(val) => handleChangeText("heading", val)}
+              ></TextInput>
+
+              <Text style={styles.text}>Body</Text>
+              <TextInput
                 style={{
-                  margin: 5,
-                  borderBottomWidth: 1,
-                  borderColor: "#BDBDBD",
-                  padding: 10,
+                  borderColor: "#066b24",
+                  borderWidth: 1.5,
+                  borderRadius: 10,
+                  padding: 5,
+                  paddingLeft: 10,
+                  height: 80,
                 }}
+                placeholder="enter the content"
+                value={data.name}
+                onChangeText={(val) => handleChangeText("name", val)}
+              ></TextInput>
+
+              <Text style={styles.text}>Publisher</Text>
+              <TextInput
+                style={{
+                  borderColor: "#066b24",
+                  borderWidth: 1.5,
+                  borderRadius: 10,
+                  padding: 5,
+                  paddingLeft: 10,
+                }}
+                placeholder="enter Publisher"
+                value={data.date}
+                onChangeText={(val) => handleChangeText("date", val)}
+              ></TextInput>
+              <TouchableOpacity
+                style={styles.button}
+                activeOpacity={2}
+                onPress={() => UpdateUser()}
+                underlayColor="#0084fffa"
               >
-                <Text style={styles.text}>Heading</Text>
-                <TextInput
-                  style={{
-                    borderColor: "#066b24",
-                    borderWidth: 1.5,
-                    borderRadius: 10,
-                    padding: 5,
-                    paddingLeft: 10,
-                  }}
-                  placeholder="enter heading"
-                  value={data.heading}
-                  onChangeText={(val) => handleChangeText("heading", val)}
-                ></TextInput>
-
-                <Text style={styles.text}>Body</Text>
-                <TextInput
-                  style={{
-                    borderColor: "#066b24",
-                    borderWidth: 1.5,
-                    borderRadius: 10,
-                    padding: 5,
-                    paddingLeft: 10,
-                    height: 80,
-                  }}
-                  placeholder="enter the content"
-                  value={data.name}
-                  onChangeText={(val) => handleChangeText("name", val)}
-                ></TextInput>
-
-                <Text style={styles.text}>Publisher</Text>
-                <TextInput
-                  style={{
-                    borderColor: "#066b24",
-                    borderWidth: 1.5,
-                    borderRadius: 10,
-                    padding: 5,
-                    paddingLeft: 10,
-                  }}
-                  placeholder="enter Publisher"
-                  value={data.date}
-                  onChangeText={(val) => handleChangeText("date", val)}
-                ></TextInput>
-                <TouchableOpacity
-                  style={styles.button}
-                  activeOpacity={2}
-                  onPress={() => UpdateUser()}
-                  underlayColor="#0084fffa"
+                <Text
+                  style={{ fontSize: 20, fontWeight: "bold", color: "#fff" }}
                 >
-                  <Text
-                    style={{ fontSize: 20, fontWeight: "bold", color: "#fff" }}
-                  >
-                    Update
-                  </Text>
-                </TouchableOpacity>
-              </View>
-            </Card.Content>
-          </Card>
-        </View>
+                  Update
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </Card.Content>
+        </Card>
       </View>
-    </ImageBackground>
+    </View>
   );
 }
 
@@ -169,6 +164,9 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     fontWeight: "bold",
     fontSize: 15,
+  },
+  card: {
+    backgroundColor: "#c8e3d0",
   },
   button: {
     marginTop: 15,
@@ -184,6 +182,7 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     marginRight: 20,
     marginTop: 0,
+    backgroundColor: "#c8e3d0",
   },
   background: {
     flex: 1,
@@ -198,5 +197,6 @@ const styles = StyleSheet.create({
     marginRight: 20,
     marginTop: 50,
     elevation: 20,
+    backgroundColor: "#c8e3d0",
   },
 });

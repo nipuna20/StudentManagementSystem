@@ -73,7 +73,7 @@ export default function ScheduleList() {
       <Image
         style={{
           width: "30%",
-          height: "2%",
+          height: "20%",
           alignItems: "center",
           marginTop: 10,
           marginLeft: 260,
