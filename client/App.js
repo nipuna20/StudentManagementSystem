@@ -27,6 +27,12 @@ import Login from "./components/screen/Login";
 import Register from "./components/screen/Register";
 import ScheduleListStd from "./components/screen/TimeTable/ScheduleListStd";
 
+import AddSubmission from './components/screen/Submission/AddSubmission'
+import SubmissionList from './components/screen/Submission/SubmissionList'
+import SubmitSubmission from './components/screen/Submission/SubmitSubmission'
+import UpdateSub from "./components/screen/Submission/UpdateSubmission";
+import ViewSub from "./components/screen/Submission/ViewSubmission";
+
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -58,8 +64,8 @@ export default function App() {
           <Stack.Screen name="Schedule List" component={ScheduleList} />
           <Stack.Screen name="ScheduleStd List" component={ScheduleListStd} />
           <Stack.Screen name="Update Schedule" component={UpdateSchedule} />
-          <Stack.Screen name="Login" component={Login} />
-          <Stack.Screen name="Register" component={Register} />
+          <Stack.Screen name="Login" component={Login} options={{ headerShown: false}} />
+          <Stack.Screen name="Register" component={Register} options={{ headerShown: false}} />
 
           {/* Nipuna */}
           <Stack.Screen name="Add Feedback" component={AddFeedback} />
@@ -69,6 +75,14 @@ export default function App() {
           <Stack.Screen name="Home" component={Home} options={{ headerShown: false}} />
           <Stack.Screen name="Feedback" component={AdminFeedbackList} />
           <Stack.Screen name="Admin Feedback" component={AdminFeedbackList} />
+
+          {/*Yasith*/}
+          <Stack.Screen name="Add Submission" component={AddSubmission} />
+          <Stack.Screen name="Submission List" component={SubmissionList} />
+          <Stack.Screen name="Submit Submission" component={SubmitSubmission} />
+          <Stack.Screen name="Update Submission" component={UpdateSub} />
+          <Stack.Screen name="View Submission" component={ViewSub} />
+
         </Stack.Navigator>
       </NavigationContainer>
     </View>
