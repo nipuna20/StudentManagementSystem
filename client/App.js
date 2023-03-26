@@ -27,6 +27,7 @@ import Register from "./components/screen/Register";
 import ScheduleListStd from "./components/screen/TimeTable/ScheduleListStd";
 import AdminFeedbackList from "./components/screen/Feedback/Adminfeedbacklist";
 
+
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
@@ -67,9 +68,7 @@ export default function App() {
 
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Feedback" component={AdminFeedbackList} />
-
           <Stack.Screen name="Admin Feedback" component={AdminFeedbackList} />
-
         </Stack.Navigator>
       </NavigationContainer>
     </View>

@@ -31,10 +31,8 @@ export default function NoticeHome() {
   
 
   return (
-    <ImageBackground
-      source={require("../../../assets/bg3.png")}
-      style={styles.background}
-    >
+  
+    <View style={{ flex: 1, top: 20, backgroundColor: "#c8e3d0" }}>
       <View>
         <Text
           style={{
@@ -49,8 +47,7 @@ export default function NoticeHome() {
           }}
         >
           Notices
-          <br />
-          <br />
+       
         </Text>
         {/* store feched data in list using react native flatlist */}
         <FlatList
@@ -83,7 +80,7 @@ export default function NoticeHome() {
           )}
         ></FlatList>
       </View>
-    </ImageBackground>
+    </View>
   );
 }
 
